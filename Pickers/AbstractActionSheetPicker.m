@@ -291,7 +291,7 @@ CG_INLINE BOOL isIPhone4() {
     [self.customButtons addObject:buttonDetails];
 }
 
-- (void)addCustomButtonWithTitle:(NSString *)title actionBlock:(ActionBlock)block {
+- (void)addCustomButtonWithTitle:(NSString *)title actionBlock:(ASPActionBlock)block {
     if (!title)
         title = @"";
     if (!block)
@@ -344,7 +344,7 @@ CG_INLINE BOOL isIPhone4() {
         }
 
         case ActionTypeBlock: {
-            ActionBlock actionBlock = buttonDetails[kButtonValue];
+            ASPActionBlock actionBlock = buttonDetails[kButtonValue];
             [self dismissPicker];
             if (actionBlock)
                 actionBlock();

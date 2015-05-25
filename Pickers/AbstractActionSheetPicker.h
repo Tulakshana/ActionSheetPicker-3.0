@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, TapAction)
     TapActionCancel
 };
 
-typedef void (^ActionBlock)(void);
+typedef void (^ASPActionBlock)(void);
 
 static NSString *const kButtonValue   = @"buttonValue";
 
@@ -98,7 +98,7 @@ static NSString *const kActionTarget  = @"buttonActionTarget";
 - (void)addCustomButtonWithTitle:(NSString *)title value:(id)value;
 
     // Adds custom buttons to the left of the UIToolbar that implement specified block
-- (void)addCustomButtonWithTitle:(NSString *)title actionBlock:(ActionBlock)block;
+- (void)addCustomButtonWithTitle:(NSString *)title actionBlock:(ASPActionBlock)block;
 
     // Adds custom buttons to the left of the UIToolbar that implement specified selector
 - (void)addCustomButtonWithTitle:(NSString*)title target:(id)target selector:(SEL)selector;
